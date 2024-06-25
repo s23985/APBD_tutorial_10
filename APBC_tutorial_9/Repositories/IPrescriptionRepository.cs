@@ -5,4 +5,5 @@ namespace APBC_tutorial_9.Repositories;
 public interface IPrescriptionRepository
 {
     Task AddPrescriptionAsync(Prescription prescription);
+    Task<List<Prescription>> GetPrescriptionByPatientId(int id);
 }

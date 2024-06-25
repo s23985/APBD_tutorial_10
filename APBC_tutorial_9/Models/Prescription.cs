@@ -13,5 +13,9 @@ public class Prescription
     [Required]
     public DateTime DueDate { get; set; }
     
-    public virtual ICollection<Prescription_Medicament> PrescriptionMedicaments { get; set; }
+    public Patient Patient { get; set; }
+    
+    public Doctor Doctor { get; set; }
+
+    public virtual ICollection<Prescription_Medicament> PrescriptionMedicaments { get; set; } = [];
 }

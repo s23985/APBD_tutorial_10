@@ -13,6 +13,5 @@ public class Prescription_Medicament
     
     public int? Dose { get; set; }
     
-    [Required]
     public string Details { get; set; }
 }

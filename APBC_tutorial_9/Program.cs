@@ -1,4 +1,6 @@
 using APBC_tutorial_9.Context;
+using APBC_tutorial_9.Repositories;
+using APBC_tutorial_9.Services;
 using Microsoft.EntityFrameworkCore;
 
 public class Program
@@ -14,8 +16,12 @@ public class Program
         {
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
         });
+        builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
+        builder.Services.AddScoped<IMedicamentRepository, MedicamentRepository>();
+        builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+        builder.Services.AddScoped<IPrescriptionRepository, PrescriptionRepository>();
+        builder.Services.AddScoped<IPrescriptionService, PrescriptionService>();
         
-
         var app = builder.Build();
         
         if (app.Environment.IsDevelopment())

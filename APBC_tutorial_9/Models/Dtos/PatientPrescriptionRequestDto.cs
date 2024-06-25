@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using APBC_tutorial_9.Models.Dtos;
 
-namespace APBC_tutorial_9.Models;
+namespace APBC_tutorial_9.Models.Dtos;
 
-public class Patient
+public class PatientPrescriptionRequestDto
 {
-    [Key]
     public int IdPatient { get; set; }
     
     [Required]
@@ -18,12 +16,4 @@ public class Patient
     
     [Required]
     public DateTime Birthdate { get; set; }
-
-    public static Patient From(PatientPrescriptionRequestDto dto)
-        => new() 
-        {
-            Birthdate = dto.Birthdate,
-            FirstName = dto.FirstName,
-            LastName = dto.LastName
-        };
 }

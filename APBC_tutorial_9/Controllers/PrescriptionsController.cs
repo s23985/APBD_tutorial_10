@@ -1,4 +1,4 @@
-﻿using APBC_tutorial_9.Models.Dtos;
+﻿using APBC_tutorial_9.Models.Dtos.Prescription;
 using APBC_tutorial_9.Services;
 using Microsoft.AspNetCore.Mvc;
 

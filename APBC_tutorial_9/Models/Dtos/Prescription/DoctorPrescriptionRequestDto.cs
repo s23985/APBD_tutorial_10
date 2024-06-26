@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace APBC_tutorial_9.Models.Dtos;
+namespace APBC_tutorial_9.Models.Dtos.Prescription;
 
 public class DoctorPrescriptionRequestDto
 {

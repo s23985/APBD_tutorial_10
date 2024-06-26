@@ -1,4 +1,4 @@
-﻿namespace APBC_tutorial_9.Models.Dtos;
+﻿namespace APBC_tutorial_9.Models.Dtos.Patient;
 
 public class PatientDoctorResponseDto
 {

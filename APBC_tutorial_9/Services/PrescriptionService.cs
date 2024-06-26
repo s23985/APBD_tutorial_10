@@ -1,5 +1,5 @@
 ﻿using APBC_tutorial_9.Models;
-using APBC_tutorial_9.Models.Dtos;
+using APBC_tutorial_9.Models.Dtos.Prescription;
 using APBC_tutorial_9.Repositories;
 
 namespace APBC_tutorial_9.Services;

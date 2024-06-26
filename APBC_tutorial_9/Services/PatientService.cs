@@ -1,5 +1,4 @@
-﻿using APBC_tutorial_9.Models;
-using APBC_tutorial_9.Models.Dtos;
+﻿using APBC_tutorial_9.Models.Dtos.Patient;
 using APBC_tutorial_9.Repositories;
 
 namespace APBC_tutorial_9.Services;

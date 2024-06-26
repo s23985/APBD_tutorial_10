@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using APBC_tutorial_9.Models.Dtos;
+using APBC_tutorial_9.Models.Dtos.Prescription;
 
 namespace APBC_tutorial_9.Models;
 

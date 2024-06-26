@@ -1,4 +1,5 @@
 using APBC_tutorial_9.Context;
+using APBC_tutorial_9.Middlewares;
 using APBC_tutorial_9.Repositories;
 using APBC_tutorial_9.Services;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +32,7 @@ public class Program
             app.UseSwaggerUI();
         }
 
+        app.UseMiddleware<ErrorHandlingMiddleware>();
         app.UseHttpsRedirection();
         app.MapControllers();
         app.Run();

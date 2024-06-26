@@ -24,4 +24,10 @@ public class PrescriptionsController : ControllerBase
         
         return Ok();
     }
+
+    [HttpGet]
+    public async Task<IActionResult> ThrowUnhandledError([FromHeader] string userAgent)
+    {
+        throw new Exception("Unhandled.");
+    }
 }

@@ -19,7 +19,7 @@ public class PatientService : IPatientService
         var patient = await _patientRepository.GetPatientByIdAsync(id);
 
         if (patient == null)
-            return new PatientFullInfoResponseDto();
+            return null;
 
         var prescriptions = await _prescriptionRepository.GetPrescriptionByPatientId(patient.IdPatient);
 

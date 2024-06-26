@@ -85,7 +85,7 @@ public class PrescriptionServiceTests
             DueDate = DateTime.Now.AddDays(1),
             Doctor = new DoctorPrescriptionRequestDto { IdDoctor = 1 },
             Patient = patientDto,
-            Medicaments = new()
+            Medicaments = new List<MedicamentPrescriptionRequestDto>
             {
                 new() { IdMedicament = 1, Description = "Description1", Dose = 20 }
             }
@@ -118,7 +118,8 @@ public class PrescriptionServiceTests
             Date = DateTime.Now,
             DueDate = DateTime.Now.AddDays(1),
             Doctor = new DoctorPrescriptionRequestDto { IdDoctor = 1 },
-            Patient = new PatientPrescriptionRequestDto { IdPatient = 1, FirstName = "John", LastName = "Doe", Birthdate = DateTime.Now.AddYears(-30) },
+            Patient = new PatientPrescriptionRequestDto
+                { IdPatient = 1, FirstName = "John", LastName = "Doe", Birthdate = DateTime.Now.AddYears(-30) },
             Medicaments = new List<MedicamentPrescriptionRequestDto>
             {
                 new() { IdMedicament = 1 }

@@ -67,7 +67,7 @@ public class PatientService : IPatientService
             FirstName = patient.FirstName,
             LastName = patient.LastName,
             Birthdate = patient.Birthdate,
-            Prescriptions = prescriptionsDto
+            Prescriptions = prescriptionsDto.OrderBy(x => x.DueDate).ToList()
         };
 
         return fullResponseDto;

@@ -18,4 +18,7 @@ public class Prescription
     public Doctor Doctor { get; set; }
 
     public virtual ICollection<Prescription_Medicament> PrescriptionMedicaments { get; set; } = [];
+    
+    [Timestamp]
+    public byte[] RowVersion { get; set; }
 }

@@ -1,6 +1,7 @@
 ﻿using APBC_tutorial_9.Models;
 using APBC_tutorial_9.Models.Dtos.Prescription;
 using APBC_tutorial_9.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace APBC_tutorial_9.Services;
 
@@ -68,7 +69,14 @@ public class PrescriptionService : IPrescriptionService
             prescription.PrescriptionMedicaments.Add(prescriptionMedicament);
         }
 
-        await _prescriptionRepository.AddPrescriptionAsync(prescription);
+        try
+        {
+            await _prescriptionRepository.AddPrescriptionAsync(prescription);
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            return false;
+        }
 
         return true;
     }

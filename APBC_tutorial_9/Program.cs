@@ -21,8 +21,11 @@ public class Program
         builder.Services.AddScoped<IMedicamentRepository, MedicamentRepository>();
         builder.Services.AddScoped<IPatientRepository, PatientRepository>();
         builder.Services.AddScoped<IPrescriptionRepository, PrescriptionRepository>();
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
+        
         builder.Services.AddScoped<IPrescriptionService, PrescriptionService>();
         builder.Services.AddScoped<IPatientService, PatientService>();
+        builder.Services.AddScoped<IUserService, UserService>();
         
         var app = builder.Build();
         

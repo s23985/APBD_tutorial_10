@@ -18,6 +18,9 @@ public class PrescriptionsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> AddPrescription([FromBody] PrescriptionRequestDto request)
     {
+        if (ModelState.IsValid == false)
+            return BadRequest(ModelState);
+        
         var result = await _prescriptionService.AddPrescriptionAsync(request);
         if (result == false)
             return BadRequest("Invalid prescription data.");
